@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lumévia Aesthetics by Mach — Luxury Aesthetic Clinic · Bahria Town, Lahore</title>
+<meta name="description" content="Lumévia Aesthetics by Mach — doctor-led luxury aesthetic clinic launching March 2026 in Bahria Town, Lahore. Book Botox, fillers, HydraFacial, laser, PRP & more." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ivory:     '#FDFBF7',
+          cream:     '#F5EFE6',
+          gold:      '#D4AF37',
+          goldDeep:  '#B5952F',
+          goldSoft:  '#C5A059',
+          champagne: '#E8DCC4',
+          espresso:  '#2C241B',
+          muted:     '#685E52',
+          borderLu:  '#E6D8C3',
+        },
+        fontFamily: {
+          serif: ['"Cormorant Garamond"', 'serif'],
+          sans:  ['Manrope', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', sans-serif; background: #FDFBF7; color: #2C241B; }
+  h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.01em; }
+  ::selection { background: #D4AF37; color: #FDFBF7; }
+  .lu-gold-text {
+    background: linear-gradient(135deg, #D4AF37 0%, #E8C977 45%, #B5952F 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .lu-divider { height:1px; background: linear-gradient(90deg, transparent, #D4AF37, transparent); }
+  .fade-up { opacity: 0; transform: translateY(20px); transition: opacity .8s ease-out, transform .8s ease-out; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .service-item .book-link { opacity: 0; transition: opacity .3s; }
+  .service-item:hover .book-link { opacity: 1; }
+  @media (max-width: 768px) { .service-item .book-link { opacity: 1; } }
+  .tab-btn.active { background: #2C241B; color: #FDFBF7; border-color: #2C241B; }
+  .tab-btn.active svg { color: #D4AF37; }
+  .toast {
+    position: fixed; top: 24px; left: 50%; transform: translateX(-50%);
+    background: #FDFBF7; border: 1px solid #E6D8C3; color: #2C241B;
+    padding: 14px 22px; font-size: 14px; z-index: 100;
+    box-shadow: 0 20px 60px -20px rgba(181,149,47,.3);
+    opacity: 0; transition: opacity .3s, transform .3s;
+    pointer-events: none; max-width: 90%;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .toast.error { border-color: #8B3A3A; color: #8B3A3A; }
+  input, select, textarea { font-family: 'Manrope', sans-serif; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: #B5952F; box-shadow: 0 0 0 1px #B5952F; }
+  select { -webkit-appearance: none; appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1L6 6L11 1' stroke='%23B5952F' stroke-width='1.5'/></svg>"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+</style>
+</head>
+<body class="bg-ivory text-espresso">
+
+<!-- ============ NAVBAR ============ -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between h-20 md:h-24">
+    <a href="#home" class="flex flex-col leading-none">
+      <span class="font-serif italic text-[28px] md:text-[34px] font-medium" style="color:#B5952F;">Lumévia</span>
+      <span class="text-[10px] md:text-[11px] tracking-[0.35em] uppercase text-muted font-medium -mt-1">Aesthetics</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-10">
+      <a href="#home" class="text-[13px] tracking-[0.18em] uppercase hover:text-goldDeep transition">Home</a>
+      <a href="#about" class="text-[13px] tracking-[0.18em] uppercase hover:text-goldDeep transition">About</a>
+      <a href="#services" class="text-[13px] tracking-[0.18em] uppercase hover:text-goldDeep transition">Services</a>
+      <a href="#book" class="text-[13px] tracking-[0.18em] uppercase hover:text-goldDeep transition">Book</a>
+      <a href="#contact" class="text-[13px] tracking-[0.18em] uppercase hover:text-goldDeep transition">Contact</a>
+      <a href="#book" class="px-6 py-3 text-[12px] tracking-[0.2em] uppercase bg-espresso text-ivory hover:bg-goldDeep transition-colors duration-500">Book Now</a>
+    </nav>
+    <button id="mobileToggle" class="md:hidden text-espresso" aria-label="Menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="md:hidden hidden bg-ivory border-t border-borderLu">
+    <div class="flex flex-col px-6 py-6 gap-5">
+      <a href="#home" class="mob-link text-[14px] tracking-[0.18em] uppercase hover:text-goldDeep">Home</a>
+      <a href="#about" class="mob-link text-[14px] tracking-[0.18em] uppercase hover:text-goldDeep">About</a>
+      <a href="#services" class="mob-link text-[14px] tracking-[0.18em] uppercase hover:text-goldDeep">Services</a>
+      <a href="#book" class="mob-link text-[14px] tracking-[0.18em] uppercase hover:text-goldDeep">Book</a>
+      <a href="#contact" class="mob-link text-[14px] tracking-[0.18em] uppercase hover:text-goldDeep">Contact</a>
+      <a href="#book" class="mob-link mt-2 px-6 py-3 text-[12px] tracking-[0.2em] uppercase bg-espresso text-ivory text-center">Book Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-24 md:pt-0">
+  <div class="absolute inset-0 z-0">
+    <img src="https://images.unsplash.com/photo-1707569590646-2a51751bb9ef?crop=entropy&cs=srgb&fm=jpg&w=1600&q=80" alt="" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-ivory/80"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-ivory/60 via-transparent to-ivory"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-20 md:py-32 w-full grid md:grid-cols-12 gap-10 items-center">
+    <div class="md:col-span-7">
+      <div class="flex items-center gap-3 mb-8 fade-up">
+        <span class="h-px w-10 bg-goldDeep"></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase text-muted font-semibold">Launching March 2026 · Bahria Town, Lahore</span>
+      </div>
+      <h1 class="font-serif text-espresso text-5xl sm:text-6xl lg:text-[88px] leading-[1.02] font-medium tracking-tight fade-up">
+        The art of <span class="italic lu-gold-text">luminous</span><br>beauty, refined.
+      </h1>
+      <p class="mt-8 text-muted text-base md:text-lg max-w-xl leading-relaxed fade-up">
+        Lumévia Aesthetics by Mach is a premier aesthetic clinic offering bespoke, doctor-led cosmetic treatments in a serene, luxurious setting — crafted to reveal your most radiant self.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 fade-up">
+        <a href="#book" class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-espresso text-ivory text-[12px] tracking-[0.25em] uppercase hover:bg-goldDeep transition-colors duration-500">
+          Book Consultation
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="group-hover:rotate-12 transition-transform"><path d="M12 3L13.5 9L19.5 10.5L13.5 12L12 18L10.5 12L4.5 10.5L10.5 9L12 3Z"/></svg>
+        </a>
+        <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-goldDeep text-espresso text-[12px] tracking-[0.25em] uppercase hover:bg-cream transition-colors duration-500">Explore Treatments</a>
+      </div>
+      <div class="mt-14 grid grid-cols-3 gap-8 max-w-lg fade-up">
+        <div><div class="font-serif text-3xl md:text-4xl text-goldDeep">40+</div><div class="text-[11px] tracking-[0.2em] uppercase text-muted mt-1">Treatments</div></div>
+        <div><div class="font-serif text-3xl md:text-4xl text-goldDeep">Doctor</div><div class="text-[11px] tracking-[0.2em] uppercase text-muted mt-1">Led Clinic</div></div>
+        <div><div class="font-serif text-3xl md:text-4xl text-goldDeep">100%</div><div class="text-[11px] tracking-[0.2em] uppercase text-muted mt-1">Personalised</div></div>
+      </div>
+    </div>
+    <div class="md:col-span-5 relative hidden md:block fade-up">
+      <div class="relative aspect-[4/5] overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1730239614163-fabc98bf808d?crop=entropy&cs=srgb&fm=jpg&w=900&q=80" alt="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 ring-1 ring-goldDeep/40"></div>
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-ivory border border-borderLu px-6 py-4 shadow-xl">
+        <div class="text-[10px] tracking-[0.3em] uppercase text-muted">By appointment</div>
+        <div class="font-serif text-xl text-espresso italic mt-1">Bespoke Care</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="relative py-24 md:py-36 bg-ivory">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid md:grid-cols-12 gap-12 md:gap-20 items-center">
+    <div class="md:col-span-5 relative fade-up">
+      <div class="relative aspect-[4/5] overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1668989956626-5b633e36ee27?crop=entropy&cs=srgb&fm=jpg&w=900&q=80" alt="" class="w-full h-full object-cover">
+      </div>
+      <div class="hidden md:block absolute -top-6 -right-6 w-32 h-32 border border-goldDeep/50"></div>
+    </div>
+    <div class="md:col-span-7 fade-up">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="h-px w-10 bg-goldDeep"></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase text-goldDeep font-semibold">About Lumévia</span>
+      </div>
+      <h2 class="font-serif text-espresso text-4xl md:text-5xl lg:text-6xl leading-tight">
+        A sanctuary where <span class="italic lu-gold-text">science meets artistry</span>.
+      </h2>
+      <div class="mt-8 space-y-6 text-muted leading-relaxed text-base md:text-lg">
+        <p>Founded by Dr. Mach, <span class="text-espresso font-medium">Lumévia Aesthetics</span> was created with a singular vision — to bring together advanced medical expertise and refined aesthetic sensibility under one roof. Every treatment is personalised, every result effortlessly natural.</p>
+        <p>From non-surgical rejuvenation to advanced laser and injectables, our clinic blends the latest clinical innovation with hand-selected, premium formulations — all delivered in a calm, discreet environment tailored to you.</p>
+      </div>
+      <div class="mt-10 grid grid-cols-2 gap-6 max-w-md">
+        <div class="border-l-2 border-goldDeep pl-4"><div class="font-serif text-xl italic">Doctor-Led</div><div class="text-xs text-muted">Clinical Excellence</div></div>
+        <div class="border-l-2 border-goldDeep pl-4"><div class="font-serif text-xl italic">FDA-Approved</div><div class="text-xs text-muted">Technology & Products</div></div>
+        <div class="border-l-2 border-goldDeep pl-4"><div class="font-serif text-xl italic">Discreet</div><div class="text-xs text-muted">Private Consultation</div></div>
+        <div class="border-l-2 border-goldDeep pl-4"><div class="font-serif text-xl italic">Tailored</div><div class="text-xs text-muted">Bespoke Treatment Plans</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="relative py-24 md:py-36 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="max-w-3xl fade-up">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="h-px w-10 bg-goldDeep"></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase text-goldDeep font-semibold">Our Treatments</span>
+      </div>
+      <h2 class="font-serif text-espresso text-4xl md:text-5xl lg:text-6xl leading-tight">
+        A complete aesthetic <span class="italic lu-gold-text">menu</span>, curated for you.
+      </h2>
+      <p class="mt-6 text-muted text-base md:text-lg max-w-2xl">From subtle refinements to transformative rejuvenation — explore our full spectrum of evidence-based aesthetic treatments.</p>
+    </div>
+    <div id="serviceTabs" class="mt-14 flex flex-wrap gap-2 md:gap-3"></div>
+    <div id="serviceDisplay" class="mt-12 grid md:grid-cols-12 gap-8 md:gap-12"></div>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section id="book" class="relative py-24 md:py-36 bg-ivory overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.04] pointer-events-none">
+    <img src="https://images.unsplash.com/photo-1707569590646-2a51751bb9ef?crop=entropy&cs=srgb&fm=jpg&w=1200&q=60" alt="" class="w-full h-full object-cover">
+  </div>
+  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 grid md:grid-cols-12 gap-12">
+    <div class="md:col-span-5 fade-up">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="h-px w-10 bg-goldDeep"></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase text-goldDeep font-semibold">Book Appointment</span>
+      </div>
+      <h2 class="font-serif text-espresso text-4xl md:text-5xl lg:text-[56px] leading-tight">
+        Begin your<br><span class="italic lu-gold-text">Lumévia</span> journey.
+      </h2>
+      <p class="mt-6 text-muted leading-relaxed">Share a few details and our clinic coordinator will confirm your appointment at our Bahria Town, Lahore location. All consultations are private and pressure-free.</p>
+      <div class="mt-10 space-y-5">
+        <div class="flex items-center gap-3"><span class="w-6 h-6 rounded-full border border-goldDeep flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm">Personalised treatment plan</span></div>
+        <div class="flex items-center gap-3"><span class="w-6 h-6 rounded-full border border-goldDeep flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm">Doctor-led consultation</span></div>
+        <div class="flex items-center gap-3"><span class="w-6 h-6 rounded-full border border-goldDeep flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm">Private, discreet setting</span></div>
+        <div class="flex items-center gap-3"><span class="w-6 h-6 rounded-full border border-goldDeep flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm">No obligation quote</span></div>
+      </div>
+    </div>
+
+    <div class="md:col-span-7 fade-up">
+      <div class="bg-white border border-borderLu p-6 md:p-10" style="box-shadow: 0 20px 60px -20px rgba(181,149,47,.18);">
+        <div id="bookingSuccess" class="hidden py-16 text-center">
+          <div class="w-16 h-16 mx-auto rounded-full bg-cream border border-goldDeep flex items-center justify-center mb-6">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 class="font-serif italic text-3xl">Thank you.</h3>
+          <p class="mt-4 text-muted max-w-md mx-auto">Your appointment request has been received. Our team will contact you shortly to confirm your preferred date and time.</p>
+          <button id="bookAnother" class="mt-8 text-[11px] tracking-[0.25em] uppercase text-goldDeep hover:text-espresso transition">Book another appointment</button>
+        </div>
+
+        <form id="bookingForm" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Full Name *</label>
+              <input name="name" required placeholder="Your name" class="w-full h-11 px-3 border border-borderLu bg-white">
+            </div>
+            <div>
+              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Phone *</label>
+              <input name="phone" required placeholder="+92 3XX XXX XXXX" class="w-full h-11 px-3 border border-borderLu bg-white">
+            </div>
+          </div>
+          <div>
+            <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Email (optional)</label>
+            <input name="email" type="email" placeholder="you@example.com" class="w-full h-11 px-3 border border-borderLu bg-white">
+          </div>
+          <div>
+            <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Treatment *</label>
+            <select id="serviceSelect" name="service" required class="w-full h-11 px-3 border border-borderLu bg-white">
+              <option value="">Select a treatment</option>
+            </select>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Preferred Date *</label>
+              <input name="date" type="date" required class="w-full h-11 px-3 border border-borderLu bg-white">
+            </div>
+            <div>
+              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Preferred Time *</label>
+              <select name="time" required class="w-full h-11 px-3 border border-borderLu bg-white">
+                <option value="">Select time</option>
+                <option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option>
+                <option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Notes (optional)</label>
+            <textarea name="notes" rows="4" placeholder="Any specific concerns or questions?" class="w-full px-3 py-2 border border-borderLu bg-white"></textarea>
+          </div>
+          <button type="submit" class="w-full h-12 bg-espresso hover:bg-goldDeep text-ivory text-[11px] tracking-[0.3em] uppercase transition-colors duration-500">Request Appointment</button>
+          <p class="text-xs text-muted text-center">Or call us directly at <a href="tel:+923045992981" class="text-goldDeep hover:underline">+92 304 599 2981</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="relative py-24 md:py-32 bg-espresso text-ivory overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+    <div class="max-w-2xl fade-up">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="h-px w-10 bg-gold"></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase text-gold font-semibold">Client Voices</span>
+      </div>
+      <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight">
+        Stories of <span class="italic text-[#E8C977]">luminous</span> transformation.
+      </h2>
+    </div>
+    <div class="mt-16 grid md:grid-cols-3 gap-6 md:gap-8">
+      <div class="fade-up border border-gold/25 p-8 bg-espresso/50 hover:border-gold/60 transition-all duration-500">
+        <div class="flex gap-1 mb-5">★ ★ ★ ★ ★ <span class="sr-only">5 stars</span></div>
+        <p class="font-serif italic text-lg md:text-xl leading-relaxed text-cream">"The attention to detail is unmatched. I felt heard, and the results from my skin boosters were exactly what I hoped for — natural and radiant."</p>
+        <div class="mt-8 pt-6 border-t border-gold/20"><div class="text-gold text-sm">Ayesha R.</div><div class="text-muted text-xs tracking-[0.2em] uppercase mt-1">Lahore</div></div>
+      </div>
+      <div class="fade-up border border-gold/25 p-8 bg-espresso/50 hover:border-gold/60 transition-all duration-500">
+        <div class="flex gap-1 mb-5">★ ★ ★ ★ ★</div>
+        <p class="font-serif italic text-lg md:text-xl leading-relaxed text-cream">"The clinic is beautiful and the team is so warm. My HydraFacial was pure luxury — my skin hasn't glowed like this in years."</p>
+        <div class="mt-8 pt-6 border-t border-gold/20"><div class="text-gold text-sm">Hina M.</div><div class="text-muted text-xs tracking-[0.2em] uppercase mt-1">Islamabad</div></div>
+      </div>
+      <div class="fade-up border border-gold/25 p-8 bg-espresso/50 hover:border-gold/60 transition-all duration-500">
+        <div class="flex gap-1 mb-5">★ ★ ★ ★ ★</div>
+        <p class="font-serif italic text-lg md:text-xl leading-relaxed text-cream">"Dr. Mach took time to understand what I wanted. The jawline filler is so subtle — everyone tells me I look refreshed, not 'done'."</p>
+        <div class="mt-8 pt-6 border-t border-gold/20"><div class="text-gold text-sm">Zara A.</div><div class="text-muted text-xs tracking-[0.2em] uppercase mt-1">Lahore</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="relative py-24 md:py-36 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid md:grid-cols-12 gap-12 md:gap-16">
+    <div class="md:col-span-5 fade-up">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="h-px w-10 bg-goldDeep"></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase text-goldDeep font-semibold">Visit / Contact</span>
+      </div>
+      <h2 class="font-serif text-espresso text-4xl md:text-5xl lg:text-6xl leading-tight">Let's <span class="italic lu-gold-text">connect</span>.</h2>
+      <p class="mt-6 text-muted leading-relaxed">Have a question, want to learn more about a treatment, or prefer to book by phone? Our team is here to help.</p>
+      <div class="mt-10 space-y-6">
+        <a href="tel:+923045992981" class="flex items-start gap-4 group">
+          <span class="w-10 h-10 border border-goldDeep flex items-center justify-center group-hover:bg-goldDeep transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="1.6" class="group-hover:stroke-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <div><div class="text-[10px] tracking-[0.25em] uppercase text-muted">Call / WhatsApp</div><div class="mt-1">+92 304 599 2981</div></div>
+        </a>
+        <a href="https://wa.me/923045992981" target="_blank" rel="noreferrer" class="flex items-start gap-4 group">
+          <span class="w-10 h-10 border border-goldDeep flex items-center justify-center group-hover:bg-goldDeep transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="1.6"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </span>
+          <div><div class="text-[10px] tracking-[0.25em] uppercase text-muted">WhatsApp</div><div class="mt-1">Chat with us</div></div>
+        </a>
+        <div class="flex items-start gap-4">
+          <span class="w-10 h-10 border border-goldDeep flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div><div class="text-[10px] tracking-[0.25em] uppercase text-muted">Clinic Location</div><div class="mt-1">Bahria Town, Lahore, Pakistan</div></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="w-10 h-10 border border-goldDeep flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          <div><div class="text-[10px] tracking-[0.25em] uppercase text-muted">Opening</div><div class="mt-1">Grand launch — March 2026</div></div>
+        </div>
+        <a href="https://instagram.com" target="_blank" rel="noreferrer" class="flex items-start gap-4 group">
+          <span class="w-10 h-10 border border-goldDeep flex items-center justify-center group-hover:bg-goldDeep transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+          </span>
+          <div><div class="text-[10px] tracking-[0.25em] uppercase text-muted">Follow</div><div class="mt-1">@lumevia.aesthetics</div></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="md:col-span-7 fade-up">
+      <div class="bg-white border border-borderLu p-6 md:p-10">
+        <form id="contactForm" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Name *</label>
+              <input name="name" required class="w-full h-11 px-3 border border-borderLu bg-white" placeholder="Your name">
+            </div>
+            <div>
+              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Phone</label>
+              <input name="phone" class="w-full h-11 px-3 border border-borderLu bg-white" placeholder="+92 3XX XXX XXXX">
+            </div>
+          </div>
+          <div>
+            <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Email</label>
+            <input name="email" type="email" class="w-full h-11 px-3 border border-borderLu bg-white" placeholder="you@example.com">
+          </div>
+          <div>
+            <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Message *</label>
+            <textarea name="message" required rows="5" placeholder="Tell us about your goals or questions..." class="w-full px-3 py-2 border border-borderLu bg-white"></textarea>
+          </div>
+          <button type="submit" class="w-full h-12 bg-espresso hover:bg-goldDeep text-ivory text-[11px] tracking-[0.3em] uppercase transition-colors duration-500">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ivory border-t border-borderLu py-14">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid md:grid-cols-4 gap-10">
+    <div class="md:col-span-2">
+      <div class="flex flex-col leading-none">
+        <span class="font-serif italic text-3xl font-medium" style="color:#B5952F;">Lumévia</span>
+        <span class="text-[10px] tracking-[0.35em] uppercase text-muted mt-1">Aesthetics by Mach</span>
+      </div>
+      <p class="mt-5 text-sm text-muted max-w-sm leading-relaxed">A doctor-led aesthetic clinic in Bahria Town, Lahore — bringing advanced cosmetic medicine together with refined, bespoke care.</p>
+    </div>
+    <div>
+      <div class="text-[10px] tracking-[0.3em] uppercase text-goldDeep mb-4 font-semibold">Explore</div>
+      <ul class="space-y-3 text-sm">
+        <li><a href="#about" class="hover:text-goldDeep">About</a></li>
+        <li><a href="#services" class="hover:text-goldDeep">Services</a></li>
+        <li><a href="#book" class="hover:text-goldDeep">Book</a></li>
+        <li><a href="#contact" class="hover:text-goldDeep">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-[10px] tracking-[0.3em] uppercase text-goldDeep mb-4 font-semibold">Connect</div>
+      <ul class="space-y-3 text-sm">
+        <li><a href="tel:+923045992981" class="hover:text-goldDeep">+92 304 599 2981</a></li>
+        <li><a href="https://wa.me/923045992981" target="_blank" rel="noreferrer" class="hover:text-goldDeep">WhatsApp</a></li>
+        <li><a href="https://instagram.com" target="_blank" rel="noreferrer" class="hover:text-goldDeep">@lumevia.aesthetics</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="lu-divider my-10 max-w-7xl mx-auto"></div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted">
+    <div>© <span id="year"></span> Lumévia Aesthetics. All rights reserved.</div>
+    <div class="tracking-[0.2em] uppercase">Grand launch · March 2026</div>
+  </div>
+</footer>
+
+<!-- ============ TOAST ============ -->
+<div id="toast" class="toast"></div>
+
+<script>
+/* =============== DATA =============== */
+const CATEGORIES = [
+  { id:"face", name:"Face", icon:"✦",
+    image:"https://images.unsplash.com/photo-1730239614163-fabc98bf808d?crop=entropy&cs=srgb&fm=jpg&w=900&q=80",
+    items:["Botox","Dermal Fillers (Lips, Jawline, Chin, Cheeks)","Skin Boosters","PRP Face (Vampire Facial)","Microneedling","RF Skin Tightening","HIFU","Chemical Peels","Hydra Facial","Carbon Laser Peel","Pigmentation Treatment","Anti-Aging Treatments","Under-Eye Rejuvenation"] },
+  { id:"acne", name:"Acne & Skin", icon:"❋",
+    image:"https://images.unsplash.com/photo-1706419972358-028e2c713133?crop=entropy&cs=srgb&fm=jpg&w=900&q=80",
+    items:["Acne Treatment","Acne Scar Treatment","Open Pores Treatment","Skin Brightening","Melasma Treatment"] },
+  { id:"body", name:"Body", icon:"❁",
+    image:"https://images.unsplash.com/photo-1668989956626-5b633e36ee27?crop=entropy&cs=srgb&fm=jpg&w=900&q=80",
+    items:["Body Contouring","Fat Reduction","RF Body Tightening","Stretch Mark Treatment"] },
+  { id:"hair", name:"Hair", icon:"❀",
+    image:"https://images.unsplash.com/photo-1707569590646-2a51751bb9ef?crop=entropy&cs=srgb&fm=jpg&w=900&q=80",
+    items:["Hair PRP","Hair Fall Treatment","Hair Regrowth Therapy","Dandruff Treatment"] },
+  { id:"laser", name:"Laser", icon:"✧",
+    image:"https://images.unsplash.com/photo-1730239614163-fabc98bf808d?crop=entropy&cs=srgb&fm=jpg&w=900&q=80",
+    items:["Laser Hair Removal","Laser Skin Rejuvenation","Tattoo Removal"] },
+  { id:"wellness", name:"Wellness / Beauty", icon:"✺",
+    image:"https://images.unsplash.com/photo-1706419972358-028e2c713133?crop=entropy&cs=srgb&fm=jpg&w=900&q=80",
+    items:["IV Drips","Glutathione Therapy","Vitamin Injections"] },
+];
+
+/* =============== SERVICE TABS =============== */
+const tabsEl = document.getElementById('serviceTabs');
+const displayEl = document.getElementById('serviceDisplay');
+let active = 'face';
+
+function renderTabs(){
+  tabsEl.innerHTML = CATEGORIES.map(c => `
+    <button data-id="${c.id}" class="tab-btn ${active===c.id?'active':''} inline-flex items-center gap-2 px-5 py-3 text-[11px] tracking-[0.22em] uppercase transition-all duration-400 border border-borderLu hover:border-goldDeep">
+      <span class="text-goldDeep text-sm">${c.icon}</span>${c.name}
+    </button>
+  `).join('');
+  tabsEl.querySelectorAll('button').forEach(b => {
+    b.addEventListener('click', () => { active = b.dataset.id; renderTabs(); renderDisplay(); });
+  });
+}
+
+function renderDisplay(){
+  const cat = CATEGORIES.find(c => c.id === active);
+  displayEl.innerHTML = `
+    <div class="md:col-span-5 relative">
+      <div class="relative aspect-[4/5] overflow-hidden">
+        <img src="${cat.image}" alt="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-espresso/70 via-transparent to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <div class="text-[10px] tracking-[0.3em] uppercase text-champagne">Category</div>
+          <div class="font-serif italic text-ivory text-3xl md:text-4xl mt-2">${cat.name}</div>
+        </div>
+      </div>
+    </div>
+    <div class="md:col-span-7">
+      <div class="grid sm:grid-cols-2 gap-x-8">
+        ${cat.items.map(item => `
+          <div class="service-item group py-5 border-b border-borderLu flex items-center justify-between">
+            <div class="flex items-start gap-3">
+              <span class="text-goldDeep mt-1.5 text-xs">✦</span>
+              <span class="text-espresso text-base md:text-[17px]">${item}</span>
+            </div>
+            <button class="book-link text-[10px] tracking-[0.25em] uppercase text-goldDeep hover:text-espresso transition-all" data-service="${item.replace(/"/g,'&quot;')}">Book →</button>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+  displayEl.querySelectorAll('.book-link').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const svc = btn.dataset.service;
+      const sel = document.getElementById('serviceSelect');
+      // ensure option exists
+      if (![...sel.options].some(o => o.value === svc)) {
+        const opt = document.createElement('option'); opt.value = svc; opt.text = svc; sel.appendChild(opt);
+      }
+      sel.value = svc;
+      document.getElementById('book').scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
+
+/* populate service select */
+function populateServiceSelect(){
+  const sel = document.getElementById('serviceSelect');
+  CATEGORIES.forEach(cat => {
+    const grp = document.createElement('optgroup'); grp.label = cat.name;
+    cat.items.forEach(it => { const opt = document.createElement('option'); opt.value = it; opt.text = it; grp.appendChild(opt); });
+    sel.appendChild(grp);
+  });
+}
+
+/* =============== NAV ============== */
+const nav = document.getElementById('nav');
+function onScroll(){
+  if (window.scrollY > 20) { nav.classList.add('backdrop-blur-xl','bg-ivory/85','border-b','border-borderLu'); }
+  else { nav.classList.remove('backdrop-blur-xl','bg-ivory/85','border-b','border-borderLu'); }
+}
+window.addEventListener('scroll', onScroll);
+
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+mobileToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+/* =============== FADE UP ON SCROLL =============== */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+/* =============== TOAST =============== */
+function toast(msg, isErr=false){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.toggle('error', isErr);
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+/* =============== BOOKING FORM =============== */
+const bookingForm = document.getElementById('bookingForm');
+const bookingSuccess = document.getElementById('bookingSuccess');
+bookingForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(bookingForm));
+  if (!data.name || !data.phone || !data.service || !data.date || !data.time) {
+    toast('Please fill in all required fields.', true); return;
+  }
+  // Save locally (no backend in single-file version)
+  const bookings = JSON.parse(localStorage.getItem('lumevia_bookings') || '[]');
+  bookings.push({ ...data, id: Date.now(), status: 'pending', created_at: new Date().toISOString() });
+  localStorage.setItem('lumevia_bookings', JSON.stringify(bookings));
+
+  // WhatsApp quick-send link (optional: opens WA with pre-filled message)
+  const waMsg = `New Appointment Request%0A%0AName: ${encodeURIComponent(data.name)}%0APhone: ${encodeURIComponent(data.phone)}%0AService: ${encodeURIComponent(data.service)}%0ADate: ${data.date} ${data.time}%0ANotes: ${encodeURIComponent(data.notes||'-')}`;
+  // Uncomment next line if you want the form to auto-open WhatsApp:
+  // window.open(`https://wa.me/923045992981?text=${waMsg}`, '_blank');
+
+  bookingForm.reset();
+  bookingForm.classList.add('hidden');
+  bookingSuccess.classList.remove('hidden');
+  toast('Appointment request received!');
+});
+document.getElementById('bookAnother').addEventListener('click', () => {
+  bookingSuccess.classList.add('hidden');
+  bookingForm.classList.remove('hidden');
+});
+
+/* =============== CONTACT FORM =============== */
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(e.target));
+  if (!data.name || !data.message) { toast('Please enter your name and message.', true); return; }
+  const msgs = JSON.parse(localStorage.getItem('lumevia_contacts') || '[]');
+  msgs.push({ ...data, id: Date.now(), created_at: new Date().toISOString() });
+  localStorage.setItem('lumevia_contacts', JSON.stringify(msgs));
+  e.target.reset();
+  toast("Message sent! We'll get back to you soon.");
+});
+
+/* =============== INIT =============== */
+document.getElementById('year').textContent = new Date().getFullYear();
+// set min date to today
+const dateInput = document.querySelector('input[name="date"]');
+if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+populateServiceSelect();
+renderTabs();
+renderDisplay();
+onScroll();
+</script>
+</body>
+</html>
