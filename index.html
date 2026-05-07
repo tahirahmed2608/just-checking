@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Lumévia Aesthetics by Mach — Luxury Aesthetic Clinic · Bahria Town, Lahore</title>
-<meta name="description" content="Lumévia Aesthetics by Mach — doctor-led luxury aesthetic clinic launching March 2026 in Bahria Town, Lahore. Book Botox, fillers, HydraFacial, laser, PRP & more." />
+<meta name="description" content="Lumévia Aesthetics by Mach — doctor-led luxury aesthetic clinic launching March 2026 in Bahria Town, Lahore. Botox, fillers, HydraFacial, laser, PRP & more." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,55 +14,54 @@
     theme: {
       extend: {
         colors: {
-          ivory:     '#FDFBF7',
-          cream:     '#F5EFE6',
-          gold:      '#D4AF37',
-          goldDeep:  '#B5952F',
-          goldSoft:  '#C5A059',
-          champagne: '#E8DCC4',
-          espresso:  '#2C241B',
-          muted:     '#685E52',
-          borderLu:  '#E6D8C3',
+          ivory:'#FDFBF7', cream:'#F5EFE6', gold:'#D4AF37', goldDeep:'#B5952F',
+          goldSoft:'#C5A059', champagne:'#E8DCC4', espresso:'#2C241B',
+          muted:'#685E52', borderLu:'#E6D8C3',
         },
-        fontFamily: {
-          serif: ['"Cormorant Garamond"', 'serif'],
-          sans:  ['Manrope', 'sans-serif'],
-        }
+        fontFamily: { serif:['"Cormorant Garamond"','serif'], sans:['Manrope','sans-serif'] }
       }
     }
   }
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Manrope', sans-serif; background: #FDFBF7; color: #2C241B; }
-  h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.01em; }
-  ::selection { background: #D4AF37; color: #FDFBF7; }
+  body { font-family:'Manrope',sans-serif; background:#FDFBF7; color:#2C241B; }
+  h1,h2,h3,h4 { font-family:'Cormorant Garamond',serif; letter-spacing:-0.01em; }
+  ::selection { background:#D4AF37; color:#FDFBF7; }
   .lu-gold-text {
-    background: linear-gradient(135deg, #D4AF37 0%, #E8C977 45%, #B5952F 100%);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg,#D4AF37 0%,#E8C977 45%,#B5952F 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
   }
-  .lu-divider { height:1px; background: linear-gradient(90deg, transparent, #D4AF37, transparent); }
-  .fade-up { opacity: 0; transform: translateY(20px); transition: opacity .8s ease-out, transform .8s ease-out; }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
-  .service-item .book-link { opacity: 0; transition: opacity .3s; }
-  .service-item:hover .book-link { opacity: 1; }
-  @media (max-width: 768px) { .service-item .book-link { opacity: 1; } }
-  .tab-btn.active { background: #2C241B; color: #FDFBF7; border-color: #2C241B; }
-  .tab-btn.active svg { color: #D4AF37; }
+  .lu-divider { height:1px; background:linear-gradient(90deg,transparent,#D4AF37,transparent); }
+  .fade-up { opacity:0; transform:translateY(16px); transition:opacity .7s ease-out, transform .7s ease-out; }
+  .fade-up.visible { opacity:1; transform:translateY(0); }
+  .service-item .book-link { opacity:0; transition:opacity .3s; }
+  .service-item:hover .book-link { opacity:1; }
+  @media (max-width: 768px){ .service-item .book-link { opacity:1; } }
+  .tab-btn.active { background:#2C241B; color:#FDFBF7; border-color:#2C241B; }
+  .tab-btn.active .tab-ico { color:#D4AF37; }
   .toast {
-    position: fixed; top: 24px; left: 50%; transform: translateX(-50%);
-    background: #FDFBF7; border: 1px solid #E6D8C3; color: #2C241B;
-    padding: 14px 22px; font-size: 14px; z-index: 100;
-    box-shadow: 0 20px 60px -20px rgba(181,149,47,.3);
-    opacity: 0; transition: opacity .3s, transform .3s;
-    pointer-events: none; max-width: 90%;
+    position:fixed; top:24px; left:50%; transform:translateX(-50%);
+    background:#FDFBF7; border:1px solid #E6D8C3; color:#2C241B;
+    padding:14px 22px; font-size:14px; z-index:100;
+    box-shadow:0 20px 60px -20px rgba(181,149,47,.3);
+    opacity:0; transition:opacity .3s, transform .3s;
+    pointer-events:none; max-width:90%;
   }
-  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-  .toast.error { border-color: #8B3A3A; color: #8B3A3A; }
-  input, select, textarea { font-family: 'Manrope', sans-serif; }
-  input:focus, select:focus, textarea:focus { outline: none; border-color: #B5952F; box-shadow: 0 0 0 1px #B5952F; }
-  select { -webkit-appearance: none; appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1L6 6L11 1' stroke='%23B5952F' stroke-width='1.5'/></svg>"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+  .toast.error { border-color:#8B3A3A; color:#8B3A3A; }
+  input, select, textarea { font-family:'Manrope',sans-serif; }
+  input:focus, select:focus, textarea:focus { outline:none; border-color:#B5952F; box-shadow:0 0 0 1px #B5952F; }
+  /* Star rating */
+  .star-rate { display:inline-flex; gap:6px; }
+  .star-rate input { display:none; }
+  .star-rate label {
+    cursor:pointer; font-size:28px; color:#E6D8C3; line-height:1; transition:color .15s, transform .15s;
+  }
+  .star-rate label:hover, .star-rate label:hover ~ label { color:#E6D8C3 !important; }
+  .star-rate { direction:rtl; }
+  .star-rate input:checked ~ label { color:#D4AF37; }
+  .star-rate label:hover, .star-rate input:checked + label, .star-rate input:checked + label ~ label { color:#D4AF37; }
 </style>
 </head>
 <body class="bg-ivory text-espresso">
@@ -74,11 +73,11 @@
       <span class="font-serif italic text-[28px] md:text-[34px] font-medium" style="color:#B5952F;">Lumévia</span>
       <span class="text-[10px] md:text-[11px] tracking-[0.35em] uppercase text-muted font-medium -mt-1">Aesthetics</span>
     </a>
-    <nav class="hidden md:flex items-center gap-10">
+    <nav class="hidden md:flex items-center gap-9">
       <a href="#home" class="text-[13px] tracking-[0.18em] uppercase hover:text-goldDeep transition">Home</a>
       <a href="#about" class="text-[13px] tracking-[0.18em] uppercase hover:text-goldDeep transition">About</a>
       <a href="#services" class="text-[13px] tracking-[0.18em] uppercase hover:text-goldDeep transition">Services</a>
-      <a href="#book" class="text-[13px] tracking-[0.18em] uppercase hover:text-goldDeep transition">Book</a>
+      <a href="#prices" class="text-[13px] tracking-[0.18em] uppercase hover:text-goldDeep transition">Prices</a>
       <a href="#contact" class="text-[13px] tracking-[0.18em] uppercase hover:text-goldDeep transition">Contact</a>
       <a href="#book" class="px-6 py-3 text-[12px] tracking-[0.2em] uppercase bg-espresso text-ivory hover:bg-goldDeep transition-colors duration-500">Book Now</a>
     </nav>
@@ -87,13 +86,13 @@
     </button>
   </div>
   <div id="mobileMenu" class="md:hidden hidden bg-ivory border-t border-borderLu">
-    <div class="flex flex-col px-6 py-6 gap-5">
-      <a href="#home" class="mob-link text-[14px] tracking-[0.18em] uppercase hover:text-goldDeep">Home</a>
-      <a href="#about" class="mob-link text-[14px] tracking-[0.18em] uppercase hover:text-goldDeep">About</a>
-      <a href="#services" class="mob-link text-[14px] tracking-[0.18em] uppercase hover:text-goldDeep">Services</a>
-      <a href="#book" class="mob-link text-[14px] tracking-[0.18em] uppercase hover:text-goldDeep">Book</a>
-      <a href="#contact" class="mob-link text-[14px] tracking-[0.18em] uppercase hover:text-goldDeep">Contact</a>
-      <a href="#book" class="mob-link mt-2 px-6 py-3 text-[12px] tracking-[0.2em] uppercase bg-espresso text-ivory text-center">Book Now</a>
+    <div class="flex flex-col px-6 py-5 gap-4">
+      <a href="#home" class="mob-link text-[14px] tracking-[0.18em] uppercase">Home</a>
+      <a href="#about" class="mob-link text-[14px] tracking-[0.18em] uppercase">About</a>
+      <a href="#services" class="mob-link text-[14px] tracking-[0.18em] uppercase">Services</a>
+      <a href="#prices" class="mob-link text-[14px] tracking-[0.18em] uppercase">Prices</a>
+      <a href="#contact" class="mob-link text-[14px] tracking-[0.18em] uppercase">Contact</a>
+      <a href="#book" class="mob-link mt-1 px-6 py-3 text-[12px] tracking-[0.2em] uppercase bg-espresso text-ivory text-center">Book Now</a>
     </div>
   </div>
 </header>
@@ -105,26 +104,26 @@
     <div class="absolute inset-0 bg-ivory/80"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-ivory/60 via-transparent to-ivory"></div>
   </div>
-  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-20 md:py-32 w-full grid md:grid-cols-12 gap-10 items-center">
+  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 md:py-24 w-full grid md:grid-cols-12 gap-10 items-center">
     <div class="md:col-span-7">
-      <div class="flex items-center gap-3 mb-8 fade-up">
+      <div class="flex items-center gap-3 mb-6 fade-up">
         <span class="h-px w-10 bg-goldDeep"></span>
         <span class="text-[11px] tracking-[0.3em] uppercase text-muted font-semibold">Launching March 2026 · Bahria Town, Lahore</span>
       </div>
-      <h1 class="font-serif text-espresso text-5xl sm:text-6xl lg:text-[88px] leading-[1.02] font-medium tracking-tight fade-up">
+      <h1 class="font-serif text-espresso text-5xl sm:text-6xl lg:text-[84px] leading-[1.04] font-medium tracking-tight fade-up">
         The art of <span class="italic lu-gold-text">luminous</span><br>beauty, refined.
       </h1>
-      <p class="mt-8 text-muted text-base md:text-lg max-w-xl leading-relaxed fade-up">
+      <p class="mt-7 text-muted text-base md:text-lg max-w-xl leading-relaxed fade-up">
         Lumévia Aesthetics by Mach is a premier aesthetic clinic offering bespoke, doctor-led cosmetic treatments in a serene, luxurious setting — crafted to reveal your most radiant self.
       </p>
-      <div class="mt-10 flex flex-col sm:flex-row gap-4 fade-up">
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 fade-up">
         <a href="#book" class="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-espresso text-ivory text-[12px] tracking-[0.25em] uppercase hover:bg-goldDeep transition-colors duration-500">
           Book Consultation
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="group-hover:rotate-12 transition-transform"><path d="M12 3L13.5 9L19.5 10.5L13.5 12L12 18L10.5 12L4.5 10.5L10.5 9L12 3Z"/></svg>
         </a>
         <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-goldDeep text-espresso text-[12px] tracking-[0.25em] uppercase hover:bg-cream transition-colors duration-500">Explore Treatments</a>
       </div>
-      <div class="mt-14 grid grid-cols-3 gap-8 max-w-lg fade-up">
+      <div class="mt-10 grid grid-cols-3 gap-8 max-w-lg fade-up">
         <div><div class="font-serif text-3xl md:text-4xl text-goldDeep">40+</div><div class="text-[11px] tracking-[0.2em] uppercase text-muted mt-1">Treatments</div></div>
         <div><div class="font-serif text-3xl md:text-4xl text-goldDeep">Doctor</div><div class="text-[11px] tracking-[0.2em] uppercase text-muted mt-1">Led Clinic</div></div>
         <div><div class="font-serif text-3xl md:text-4xl text-goldDeep">100%</div><div class="text-[11px] tracking-[0.2em] uppercase text-muted mt-1">Personalised</div></div>
@@ -144,8 +143,8 @@
 </section>
 
 <!-- ============ ABOUT ============ -->
-<section id="about" class="relative py-24 md:py-36 bg-ivory">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid md:grid-cols-12 gap-12 md:gap-20 items-center">
+<section id="about" class="relative py-16 md:py-24 bg-ivory">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid md:grid-cols-12 gap-10 md:gap-16 items-center">
     <div class="md:col-span-5 relative fade-up">
       <div class="relative aspect-[4/5] overflow-hidden">
         <img src="https://images.unsplash.com/photo-1668989956626-5b633e36ee27?crop=entropy&cs=srgb&fm=jpg&w=900&q=80" alt="" class="w-full h-full object-cover">
@@ -153,18 +152,18 @@
       <div class="hidden md:block absolute -top-6 -right-6 w-32 h-32 border border-goldDeep/50"></div>
     </div>
     <div class="md:col-span-7 fade-up">
-      <div class="flex items-center gap-3 mb-6">
+      <div class="flex items-center gap-3 mb-5">
         <span class="h-px w-10 bg-goldDeep"></span>
         <span class="text-[11px] tracking-[0.3em] uppercase text-goldDeep font-semibold">About Lumévia</span>
       </div>
       <h2 class="font-serif text-espresso text-4xl md:text-5xl lg:text-6xl leading-tight">
         A sanctuary where <span class="italic lu-gold-text">science meets artistry</span>.
       </h2>
-      <div class="mt-8 space-y-6 text-muted leading-relaxed text-base md:text-lg">
-        <p>Founded by Dr. Mach, <span class="text-espresso font-medium">Lumévia Aesthetics</span> was created with a singular vision — to bring together advanced medical expertise and refined aesthetic sensibility under one roof. Every treatment is personalised, every result effortlessly natural.</p>
+      <div class="mt-6 space-y-5 text-muted leading-relaxed text-base md:text-lg">
+        <p>Founded by Dr. papa, <span class="text-espresso font-medium">Lumévia Aesthetics</span> was created with a singular vision — to bring together advanced medical expertise and refined aesthetic sensibility under one roof. Every treatment is personalised, every result effortlessly natural.</p>
         <p>From non-surgical rejuvenation to advanced laser and injectables, our clinic blends the latest clinical innovation with hand-selected, premium formulations — all delivered in a calm, discreet environment tailored to you.</p>
       </div>
-      <div class="mt-10 grid grid-cols-2 gap-6 max-w-md">
+      <div class="mt-8 grid grid-cols-2 gap-5 max-w-md">
         <div class="border-l-2 border-goldDeep pl-4"><div class="font-serif text-xl italic">Doctor-Led</div><div class="text-xs text-muted">Clinical Excellence</div></div>
         <div class="border-l-2 border-goldDeep pl-4"><div class="font-serif text-xl italic">FDA-Approved</div><div class="text-xs text-muted">Technology & Products</div></div>
         <div class="border-l-2 border-goldDeep pl-4"><div class="font-serif text-xl italic">Discreet</div><div class="text-xs text-muted">Private Consultation</div></div>
@@ -175,150 +174,100 @@
 </section>
 
 <!-- ============ SERVICES ============ -->
-<section id="services" class="relative py-24 md:py-36 bg-cream">
+<section id="services" class="relative py-16 md:py-24 bg-cream">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
     <div class="max-w-3xl fade-up">
-      <div class="flex items-center gap-3 mb-6">
+      <div class="flex items-center gap-3 mb-5">
         <span class="h-px w-10 bg-goldDeep"></span>
         <span class="text-[11px] tracking-[0.3em] uppercase text-goldDeep font-semibold">Our Treatments</span>
       </div>
       <h2 class="font-serif text-espresso text-4xl md:text-5xl lg:text-6xl leading-tight">
         A complete aesthetic <span class="italic lu-gold-text">menu</span>, curated for you.
       </h2>
-      <p class="mt-6 text-muted text-base md:text-lg max-w-2xl">From subtle refinements to transformative rejuvenation — explore our full spectrum of evidence-based aesthetic treatments.</p>
+      <p class="mt-5 text-muted text-base md:text-lg max-w-2xl">Hover any category on desktop — or tap on mobile — to instantly preview every treatment we offer.</p>
     </div>
-    <div id="serviceTabs" class="mt-14 flex flex-wrap gap-2 md:gap-3"></div>
-    <div id="serviceDisplay" class="mt-12 grid md:grid-cols-12 gap-8 md:gap-12"></div>
+    <div id="serviceTabs" class="mt-10 flex flex-wrap gap-2 md:gap-3"></div>
+    <div id="serviceDisplay" class="mt-10 grid md:grid-cols-12 gap-6 md:gap-10"></div>
   </div>
 </section>
 
-<!-- ============ BOOKING ============ -->
-<section id="book" class="relative py-24 md:py-36 bg-ivory overflow-hidden">
-  <div class="absolute inset-0 opacity-[0.04] pointer-events-none">
-    <img src="https://images.unsplash.com/photo-1707569590646-2a51751bb9ef?crop=entropy&cs=srgb&fm=jpg&w=1200&q=60" alt="" class="w-full h-full object-cover">
-  </div>
-  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 grid md:grid-cols-12 gap-12">
-    <div class="md:col-span-5 fade-up">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="h-px w-10 bg-goldDeep"></span>
-        <span class="text-[11px] tracking-[0.3em] uppercase text-goldDeep font-semibold">Book Appointment</span>
-      </div>
-      <h2 class="font-serif text-espresso text-4xl md:text-5xl lg:text-[56px] leading-tight">
-        Begin your<br><span class="italic lu-gold-text">Lumévia</span> journey.
-      </h2>
-      <p class="mt-6 text-muted leading-relaxed">Share a few details and our clinic coordinator will confirm your appointment at our Bahria Town, Lahore location. All consultations are private and pressure-free.</p>
-      <div class="mt-10 space-y-5">
-        <div class="flex items-center gap-3"><span class="w-6 h-6 rounded-full border border-goldDeep flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm">Personalised treatment plan</span></div>
-        <div class="flex items-center gap-3"><span class="w-6 h-6 rounded-full border border-goldDeep flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm">Doctor-led consultation</span></div>
-        <div class="flex items-center gap-3"><span class="w-6 h-6 rounded-full border border-goldDeep flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm">Private, discreet setting</span></div>
-        <div class="flex items-center gap-3"><span class="w-6 h-6 rounded-full border border-goldDeep flex items-center justify-center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-sm">No obligation quote</span></div>
-      </div>
-    </div>
-
-    <div class="md:col-span-7 fade-up">
-      <div class="bg-white border border-borderLu p-6 md:p-10" style="box-shadow: 0 20px 60px -20px rgba(181,149,47,.18);">
-        <div id="bookingSuccess" class="hidden py-16 text-center">
-          <div class="w-16 h-16 mx-auto rounded-full bg-cream border border-goldDeep flex items-center justify-center mb-6">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <h3 class="font-serif italic text-3xl">Thank you.</h3>
-          <p class="mt-4 text-muted max-w-md mx-auto">Your appointment request has been received. Our team will contact you shortly to confirm your preferred date and time.</p>
-          <button id="bookAnother" class="mt-8 text-[11px] tracking-[0.25em] uppercase text-goldDeep hover:text-espresso transition">Book another appointment</button>
-        </div>
-
-        <form id="bookingForm" class="space-y-5">
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Full Name *</label>
-              <input name="name" required placeholder="Your name" class="w-full h-11 px-3 border border-borderLu bg-white">
-            </div>
-            <div>
-              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Phone *</label>
-              <input name="phone" required placeholder="+92 3XX XXX XXXX" class="w-full h-11 px-3 border border-borderLu bg-white">
-            </div>
-          </div>
-          <div>
-            <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Email (optional)</label>
-            <input name="email" type="email" placeholder="you@example.com" class="w-full h-11 px-3 border border-borderLu bg-white">
-          </div>
-          <div>
-            <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Treatment *</label>
-            <select id="serviceSelect" name="service" required class="w-full h-11 px-3 border border-borderLu bg-white">
-              <option value="">Select a treatment</option>
-            </select>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Preferred Date *</label>
-              <input name="date" type="date" required class="w-full h-11 px-3 border border-borderLu bg-white">
-            </div>
-            <div>
-              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Preferred Time *</label>
-              <select name="time" required class="w-full h-11 px-3 border border-borderLu bg-white">
-                <option value="">Select time</option>
-                <option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option>
-                <option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Notes (optional)</label>
-            <textarea name="notes" rows="4" placeholder="Any specific concerns or questions?" class="w-full px-3 py-2 border border-borderLu bg-white"></textarea>
-          </div>
-          <button type="submit" class="w-full h-12 bg-espresso hover:bg-goldDeep text-ivory text-[11px] tracking-[0.3em] uppercase transition-colors duration-500">Request Appointment</button>
-          <p class="text-xs text-muted text-center">Or call us directly at <a href="tel:+923045992981" class="text-goldDeep hover:underline">+92 304 599 2981</a></p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TESTIMONIALS ============ -->
-<section class="relative py-24 md:py-32 bg-espresso text-ivory overflow-hidden">
+<!-- ============ PRICE LIST ============ -->
+<section id="prices" class="relative py-16 md:py-24 bg-ivory">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-    <div class="max-w-2xl fade-up">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="h-px w-10 bg-gold"></span>
-        <span class="text-[11px] tracking-[0.3em] uppercase text-gold font-semibold">Client Voices</span>
+    <div class="max-w-3xl fade-up">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="h-px w-10 bg-goldDeep"></span>
+        <span class="text-[11px] tracking-[0.3em] uppercase text-goldDeep font-semibold">Price List</span>
       </div>
-      <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight">
-        Stories of <span class="italic text-[#E8C977]">luminous</span> transformation.
+      <h2 class="font-serif text-espresso text-4xl md:text-5xl lg:text-6xl leading-tight">
+        Transparent, <span class="italic lu-gold-text">honest</span> pricing.
       </h2>
+      <p class="mt-5 text-muted text-base md:text-lg max-w-2xl">
+        All prices below are starting points in PKR (Pakistani Rupees). Final pricing is confirmed during your private consultation, based on your goals and treatment plan.
+      </p>
     </div>
-    <div class="mt-16 grid md:grid-cols-3 gap-6 md:gap-8">
-      <div class="fade-up border border-gold/25 p-8 bg-espresso/50 hover:border-gold/60 transition-all duration-500">
-        <div class="flex gap-1 mb-5">★ ★ ★ ★ ★ <span class="sr-only">5 stars</span></div>
-        <p class="font-serif italic text-lg md:text-xl leading-relaxed text-cream">"The attention to detail is unmatched. I felt heard, and the results from my skin boosters were exactly what I hoped for — natural and radiant."</p>
-        <div class="mt-8 pt-6 border-t border-gold/20"><div class="text-gold text-sm">Ayesha R.</div><div class="text-muted text-xs tracking-[0.2em] uppercase mt-1">Lahore</div></div>
-      </div>
-      <div class="fade-up border border-gold/25 p-8 bg-espresso/50 hover:border-gold/60 transition-all duration-500">
-        <div class="flex gap-1 mb-5">★ ★ ★ ★ ★</div>
-        <p class="font-serif italic text-lg md:text-xl leading-relaxed text-cream">"The clinic is beautiful and the team is so warm. My HydraFacial was pure luxury — my skin hasn't glowed like this in years."</p>
-        <div class="mt-8 pt-6 border-t border-gold/20"><div class="text-gold text-sm">Hina M.</div><div class="text-muted text-xs tracking-[0.2em] uppercase mt-1">Islamabad</div></div>
-      </div>
-      <div class="fade-up border border-gold/25 p-8 bg-espresso/50 hover:border-gold/60 transition-all duration-500">
-        <div class="flex gap-1 mb-5">★ ★ ★ ★ ★</div>
-        <p class="font-serif italic text-lg md:text-xl leading-relaxed text-cream">"Dr. Mach took time to understand what I wanted. The jawline filler is so subtle — everyone tells me I look refreshed, not 'done'."</p>
-        <div class="mt-8 pt-6 border-t border-gold/20"><div class="text-gold text-sm">Zara A.</div><div class="text-muted text-xs tracking-[0.2em] uppercase mt-1">Lahore</div></div>
-      </div>
+
+    <div id="priceList" class="mt-10 grid md:grid-cols-2 gap-6 md:gap-8 fade-up"></div>
+
+    <div class="mt-10 text-center fade-up">
+      <p class="text-sm text-muted italic">* Package deals & member pricing available · Contact us for personalised quotes.</p>
+      <a href="#book" class="mt-5 inline-flex items-center justify-center px-8 py-4 border border-goldDeep text-espresso text-[12px] tracking-[0.25em] uppercase hover:bg-cream transition-colors duration-500">
+        Request Custom Quote
+      </a>
     </div>
+  </div>
+</section>
+
+<!-- ============ BOOK APPOINTMENT CTA ============ -->
+<section id="book" class="relative py-16 md:py-24 bg-espresso text-ivory overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+    <img src="https://images.unsplash.com/photo-1707569590646-2a51751bb9ef?crop=entropy&cs=srgb&fm=jpg&w=1600&q=60" alt="" class="w-full h-full object-cover">
+  </div>
+  <div class="relative max-w-4xl mx-auto px-5 sm:px-8 lg:px-12 text-center fade-up">
+    <div class="flex items-center justify-center gap-3 mb-5">
+      <span class="h-px w-10 bg-gold"></span>
+      <span class="text-[11px] tracking-[0.3em] uppercase text-gold font-semibold">Book Your Appointment</span>
+      <span class="h-px w-10 bg-gold"></span>
+    </div>
+    <h2 class="font-serif text-4xl md:text-5xl lg:text-[64px] leading-tight">
+      Begin your <span class="italic text-[#E8C977]">Lumévia</span> journey.
+    </h2>
+    <p class="mt-6 text-cream/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+      To book an appointment with our clinic, please click the button below. Our coordinator will personally confirm your preferred date and time at our Bahria Town, Lahore location.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a id="bookWhatsapp" href="https://wa.me/923045992981?text=Hello%20Lum%C3%A9via%20Aesthetics%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noreferrer"
+         class="inline-flex items-center justify-center gap-3 px-10 py-4 bg-gold text-espresso text-[12px] tracking-[0.3em] uppercase font-semibold hover:bg-[#E8C977] transition-colors duration-500 min-w-[260px]">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.520-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+        Book via WhatsApp
+      </a>
+      <a href="tel:+923045992981"
+         class="inline-flex items-center justify-center gap-3 px-10 py-4 border border-gold text-ivory text-[12px] tracking-[0.3em] uppercase hover:bg-gold/10 transition-colors duration-500 min-w-[260px]">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call +92 304 599 2981
+      </a>
+    </div>
+
+    <p class="mt-6 text-xs text-cream/60 tracking-[0.2em] uppercase">Available 7 days a week · 10:00 — 19:00</p>
   </div>
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section id="contact" class="relative py-24 md:py-36 bg-cream">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid md:grid-cols-12 gap-12 md:gap-16">
-    <div class="md:col-span-5 fade-up">
-      <div class="flex items-center gap-3 mb-6">
+<section id="contact" class="relative py-16 md:py-24 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid md:grid-cols-12 gap-10 md:gap-14 items-center">
+    <div class="md:col-span-6 fade-up">
+      <div class="flex items-center gap-3 mb-5">
         <span class="h-px w-10 bg-goldDeep"></span>
         <span class="text-[11px] tracking-[0.3em] uppercase text-goldDeep font-semibold">Visit / Contact</span>
       </div>
       <h2 class="font-serif text-espresso text-4xl md:text-5xl lg:text-6xl leading-tight">Let's <span class="italic lu-gold-text">connect</span>.</h2>
-      <p class="mt-6 text-muted leading-relaxed">Have a question, want to learn more about a treatment, or prefer to book by phone? Our team is here to help.</p>
-      <div class="mt-10 space-y-6">
+      <p class="mt-5 text-muted leading-relaxed max-w-lg">Have a question or want to learn more about a treatment? Reach us directly — we love hearing from our clients.</p>
+
+      <div class="mt-8 space-y-5">
         <a href="tel:+923045992981" class="flex items-start gap-4 group">
           <span class="w-10 h-10 border border-goldDeep flex items-center justify-center group-hover:bg-goldDeep transition">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="1.6" class="group-hover:stroke-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="1.6" class="group-hover:stroke-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </span>
           <div><div class="text-[10px] tracking-[0.25em] uppercase text-muted">Call / WhatsApp</div><div class="mt-1">+92 304 599 2981</div></div>
         </a>
@@ -326,7 +275,7 @@
           <span class="w-10 h-10 border border-goldDeep flex items-center justify-center group-hover:bg-goldDeep transition">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5952F" stroke-width="1.6"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           </span>
-          <div><div class="text-[10px] tracking-[0.25em] uppercase text-muted">WhatsApp</div><div class="mt-1">Chat with us</div></div>
+          <div><div class="text-[10px] tracking-[0.25em] uppercase text-muted">WhatsApp</div><div class="mt-1">Chat with us instantly</div></div>
         </a>
         <div class="flex items-start gap-4">
           <span class="w-10 h-10 border border-goldDeep flex items-center justify-center">
@@ -349,70 +298,69 @@
       </div>
     </div>
 
-    <div class="md:col-span-7 fade-up">
-      <div class="bg-white border border-borderLu p-6 md:p-10">
-        <form id="contactForm" class="space-y-5">
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Name *</label>
-              <input name="name" required class="w-full h-11 px-3 border border-borderLu bg-white" placeholder="Your name">
-            </div>
-            <div>
-              <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Phone</label>
-              <input name="phone" class="w-full h-11 px-3 border border-borderLu bg-white" placeholder="+92 3XX XXX XXXX">
-            </div>
-          </div>
-          <div>
-            <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Email</label>
-            <input name="email" type="email" class="w-full h-11 px-3 border border-borderLu bg-white" placeholder="you@example.com">
-          </div>
-          <div>
-            <label class="text-[10px] tracking-[0.25em] uppercase text-muted block mb-2">Message *</label>
-            <textarea name="message" required rows="5" placeholder="Tell us about your goals or questions..." class="w-full px-3 py-2 border border-borderLu bg-white"></textarea>
-          </div>
-          <button type="submit" class="w-full h-12 bg-espresso hover:bg-goldDeep text-ivory text-[11px] tracking-[0.3em] uppercase transition-colors duration-500">Send Message</button>
-        </form>
+    <!-- Replaced contact-form box with elegant booking CTA panel -->
+    <div class="md:col-span-6 fade-up">
+      <div class="relative bg-white border border-borderLu p-8 md:p-12 text-center">
+        <div class="absolute top-6 left-6 right-6 lu-divider"></div>
+        <div class="text-[10px] tracking-[0.3em] uppercase text-goldDeep font-semibold mt-2">Ready to begin?</div>
+        <h3 class="font-serif text-3xl md:text-4xl mt-4 leading-tight">
+          To book an appointment,<br><span class="italic lu-gold-text">click below</span>.
+        </h3>
+        <p class="mt-5 text-muted leading-relaxed max-w-md mx-auto">
+          Our team is ready to help you book your consultation at our Bahria Town clinic — fast, friendly, and discreet.
+        </p>
+        <div class="mt-8 flex flex-col gap-3">
+          <a href="https://wa.me/923045992981?text=Hello%20Lum%C3%A9via%20Aesthetics%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noreferrer"
+             class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-espresso text-ivory text-[12px] tracking-[0.3em] uppercase hover:bg-goldDeep transition-colors duration-500">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            Book Now via WhatsApp
+          </a>
+          <a href="tel:+923045992981"
+             class="inline-flex items-center justify-center gap-3 px-8 py-4 border border-goldDeep text-espresso text-[12px] tracking-[0.3em] uppercase hover:bg-cream transition-colors duration-500">
+            Call +92 304 599 2981
+          </a>
+        </div>
+        <div class="mt-6 text-[10px] tracking-[0.25em] uppercase text-muted">Open daily · 10:00 — 19:00</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer class="bg-ivory border-t border-borderLu py-14">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid md:grid-cols-4 gap-10">
+<footer class="bg-ivory border-t border-borderLu py-12">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid md:grid-cols-4 gap-8">
     <div class="md:col-span-2">
       <div class="flex flex-col leading-none">
         <span class="font-serif italic text-3xl font-medium" style="color:#B5952F;">Lumévia</span>
         <span class="text-[10px] tracking-[0.35em] uppercase text-muted mt-1">Aesthetics by Mach</span>
       </div>
-      <p class="mt-5 text-sm text-muted max-w-sm leading-relaxed">A doctor-led aesthetic clinic in Bahria Town, Lahore — bringing advanced cosmetic medicine together with refined, bespoke care.</p>
+      <p class="mt-4 text-sm text-muted max-w-sm leading-relaxed">A doctor-led aesthetic clinic in Bahria Town, Lahore — bringing advanced cosmetic medicine together with refined, bespoke care.</p>
     </div>
     <div>
-      <div class="text-[10px] tracking-[0.3em] uppercase text-goldDeep mb-4 font-semibold">Explore</div>
-      <ul class="space-y-3 text-sm">
+      <div class="text-[10px] tracking-[0.3em] uppercase text-goldDeep mb-3 font-semibold">Explore</div>
+      <ul class="space-y-2.5 text-sm">
         <li><a href="#about" class="hover:text-goldDeep">About</a></li>
         <li><a href="#services" class="hover:text-goldDeep">Services</a></li>
-        <li><a href="#book" class="hover:text-goldDeep">Book</a></li>
+        <li><a href="#prices" class="hover:text-goldDeep">Prices</a></li>
         <li><a href="#contact" class="hover:text-goldDeep">Contact</a></li>
       </ul>
     </div>
     <div>
-      <div class="text-[10px] tracking-[0.3em] uppercase text-goldDeep mb-4 font-semibold">Connect</div>
-      <ul class="space-y-3 text-sm">
+      <div class="text-[10px] tracking-[0.3em] uppercase text-goldDeep mb-3 font-semibold">Connect</div>
+      <ul class="space-y-2.5 text-sm">
         <li><a href="tel:+923045992981" class="hover:text-goldDeep">+92 304 599 2981</a></li>
         <li><a href="https://wa.me/923045992981" target="_blank" rel="noreferrer" class="hover:text-goldDeep">WhatsApp</a></li>
         <li><a href="https://instagram.com" target="_blank" rel="noreferrer" class="hover:text-goldDeep">@lumevia.aesthetics</a></li>
       </ul>
     </div>
   </div>
-  <div class="lu-divider my-10 max-w-7xl mx-auto"></div>
+  <div class="lu-divider my-8 max-w-7xl mx-auto"></div>
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted">
     <div>© <span id="year"></span> Lumévia Aesthetics. All rights reserved.</div>
     <div class="tracking-[0.2em] uppercase">Grand launch · March 2026</div>
   </div>
 </footer>
 
-<!-- ============ TOAST ============ -->
 <div id="toast" class="toast"></div>
 
 <script>
@@ -438,19 +386,73 @@ const CATEGORIES = [
     items:["IV Drips","Glutathione Therapy","Vitamin Injections"] },
 ];
 
-/* =============== SERVICE TABS =============== */
+/* =============== PRICE LIST (PKR) — edit any value freely =============== */
+const PRICE_LIST = [
+  { category: "Face Treatments", items: [
+    { name:"Botox (per area)",            price:"From PKR 18,000" },
+    { name:"Dermal Fillers (1ml)",         price:"From PKR 45,000" },
+    { name:"Skin Boosters",                price:"From PKR 35,000" },
+    { name:"PRP Face (Vampire Facial)",    price:"From PKR 20,000" },
+    { name:"Microneedling",                price:"From PKR 15,000" },
+    { name:"RF Skin Tightening",           price:"From PKR 25,000" },
+    { name:"HIFU (Full Face)",             price:"From PKR 60,000" },
+    { name:"Chemical Peels",               price:"From PKR 8,000"  },
+    { name:"Hydra Facial",                 price:"From PKR 12,000" },
+    { name:"Carbon Laser Peel",            price:"From PKR 15,000" },
+    { name:"Anti-Aging Treatment",         price:"From PKR 22,000" },
+    { name:"Under-Eye Rejuvenation",       price:"From PKR 18,000" },
+  ]},
+  { category: "Acne & Skin", items: [
+    { name:"Acne Treatment (per session)", price:"From PKR 7,000"  },
+    { name:"Acne Scar Treatment",          price:"From PKR 15,000" },
+    { name:"Open Pores Treatment",         price:"From PKR 10,000" },
+    { name:"Skin Brightening",             price:"From PKR 12,000" },
+    { name:"Melasma Treatment",            price:"From PKR 14,000" },
+  ]},
+  { category: "Body", items: [
+    { name:"Body Contouring (per area)",   price:"From PKR 30,000" },
+    { name:"Fat Reduction (per area)",     price:"From PKR 35,000" },
+    { name:"RF Body Tightening",           price:"From PKR 25,000" },
+    { name:"Stretch Mark Treatment",       price:"From PKR 18,000" },
+  ]},
+  { category: "Hair", items: [
+    { name:"Hair PRP (per session)",       price:"From PKR 18,000" },
+    { name:"Hair Fall Treatment",          price:"From PKR 12,000" },
+    { name:"Hair Regrowth Therapy",        price:"From PKR 22,000" },
+    { name:"Dandruff Treatment",           price:"From PKR 6,000"  },
+  ]},
+  { category: "Laser", items: [
+    { name:"Laser Hair Removal — Face",    price:"From PKR 5,000"  },
+    { name:"Laser Hair Removal — Full Body", price:"From PKR 25,000" },
+    { name:"Laser Skin Rejuvenation",      price:"From PKR 18,000" },
+    { name:"Tattoo Removal (per session)", price:"From PKR 8,000"  },
+  ]},
+  { category: "Wellness / Beauty", items: [
+    { name:"IV Drips",                     price:"From PKR 12,000" },
+    { name:"Glutathione Therapy (per session)", price:"From PKR 15,000" },
+    { name:"Vitamin Injections",           price:"From PKR 5,000"  },
+  ]},
+];
+
+/* (reviews section removed) */
+
+/* =============== SERVICE TABS (HOVER ON DESKTOP) =============== */
 const tabsEl = document.getElementById('serviceTabs');
 const displayEl = document.getElementById('serviceDisplay');
 let active = 'face';
+const isDesktop = () => window.matchMedia('(min-width: 768px)').matches;
 
 function renderTabs(){
   tabsEl.innerHTML = CATEGORIES.map(c => `
-    <button data-id="${c.id}" class="tab-btn ${active===c.id?'active':''} inline-flex items-center gap-2 px-5 py-3 text-[11px] tracking-[0.22em] uppercase transition-all duration-400 border border-borderLu hover:border-goldDeep">
-      <span class="text-goldDeep text-sm">${c.icon}</span>${c.name}
+    <button data-id="${c.id}" class="tab-btn ${active===c.id?'active':''} inline-flex items-center gap-2 px-5 py-3 text-[11px] tracking-[0.22em] uppercase transition-all duration-300 border border-borderLu hover:border-goldDeep">
+      <span class="tab-ico text-goldDeep text-sm">${c.icon}</span>${c.name}
     </button>
   `).join('');
   tabsEl.querySelectorAll('button').forEach(b => {
-    b.addEventListener('click', () => { active = b.dataset.id; renderTabs(); renderDisplay(); });
+    const switchTo = () => { if(active!==b.dataset.id){ active = b.dataset.id; renderTabs(); renderDisplay(); } };
+    b.addEventListener('click', switchTo);
+    b.addEventListener('mouseenter', () => { if(isDesktop()) switchTo(); });
+    b.addEventListener('focus', switchTo);
   });
 }
 
@@ -461,66 +463,69 @@ function renderDisplay(){
       <div class="relative aspect-[4/5] overflow-hidden">
         <img src="${cat.image}" alt="" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-espresso/70 via-transparent to-transparent"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-8">
+        <div class="absolute bottom-0 left-0 right-0 p-7">
           <div class="text-[10px] tracking-[0.3em] uppercase text-champagne">Category</div>
-          <div class="font-serif italic text-ivory text-3xl md:text-4xl mt-2">${cat.name}</div>
+          <div class="font-serif italic text-ivory text-3xl md:text-4xl mt-1">${cat.name}</div>
         </div>
       </div>
     </div>
     <div class="md:col-span-7">
-      <div class="grid sm:grid-cols-2 gap-x-8">
+      <div class="grid sm:grid-cols-2 gap-x-7">
         ${cat.items.map(item => `
-          <div class="service-item group py-5 border-b border-borderLu flex items-center justify-between">
+          <div class="service-item group py-4 border-b border-borderLu flex items-center justify-between">
             <div class="flex items-start gap-3">
               <span class="text-goldDeep mt-1.5 text-xs">✦</span>
-              <span class="text-espresso text-base md:text-[17px]">${item}</span>
+              <span class="text-espresso text-[15px] md:text-base">${item}</span>
             </div>
-            <button class="book-link text-[10px] tracking-[0.25em] uppercase text-goldDeep hover:text-espresso transition-all" data-service="${item.replace(/"/g,'&quot;')}">Book →</button>
+            <a href="https://wa.me/923045992981?text=${encodeURIComponent('Hello Lumévia, I would like to book: '+item)}" target="_blank" rel="noreferrer"
+               class="book-link text-[10px] tracking-[0.25em] uppercase text-goldDeep hover:text-espresso transition-all">
+              Book →
+            </a>
           </div>
         `).join('')}
       </div>
     </div>
   `;
-  displayEl.querySelectorAll('.book-link').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const svc = btn.dataset.service;
-      const sel = document.getElementById('serviceSelect');
-      // ensure option exists
-      if (![...sel.options].some(o => o.value === svc)) {
-        const opt = document.createElement('option'); opt.value = svc; opt.text = svc; sel.appendChild(opt);
-      }
-      sel.value = svc;
-      document.getElementById('book').scrollIntoView({behavior:'smooth'});
-    });
-  });
 }
 
-/* populate service select */
-function populateServiceSelect(){
-  const sel = document.getElementById('serviceSelect');
-  CATEGORIES.forEach(cat => {
-    const grp = document.createElement('optgroup'); grp.label = cat.name;
-    cat.items.forEach(it => { const opt = document.createElement('option'); opt.value = it; opt.text = it; grp.appendChild(opt); });
-    sel.appendChild(grp);
-  });
+/* =============== PRICE LIST RENDER =============== */
+function renderPrices(){
+  const el = document.getElementById('priceList');
+  el.innerHTML = PRICE_LIST.map(group => `
+    <div class="bg-white border border-borderLu p-6 md:p-8">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-goldDeep text-lg">✦</span>
+        <h3 class="font-serif italic text-2xl text-espresso">${group.category}</h3>
+      </div>
+      <ul class="divide-y divide-borderLu">
+        ${group.items.map(it => `
+          <li class="flex items-center justify-between py-3 gap-4">
+            <span class="text-[15px] text-espresso">${it.name}</span>
+            <span class="text-[13px] tracking-wide text-goldDeep font-semibold whitespace-nowrap">${it.price}</span>
+          </li>
+        `).join('')}
+      </ul>
+    </div>
+  `).join('');
 }
 
-/* =============== NAV ============== */
+/* (review render removed) */
+
+/* =============== NAV / SCROLL =============== */
 const nav = document.getElementById('nav');
 function onScroll(){
-  if (window.scrollY > 20) { nav.classList.add('backdrop-blur-xl','bg-ivory/85','border-b','border-borderLu'); }
-  else { nav.classList.remove('backdrop-blur-xl','bg-ivory/85','border-b','border-borderLu'); }
+  if (window.scrollY > 20) nav.classList.add('backdrop-blur-xl','bg-ivory/85','border-b','border-borderLu');
+  else nav.classList.remove('backdrop-blur-xl','bg-ivory/85','border-b','border-borderLu');
 }
 window.addEventListener('scroll', onScroll);
-
 const mobileToggle = document.getElementById('mobileToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 mobileToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
-/* =============== FADE UP ON SCROLL =============== */
+/* =============== FADE UP =============== */
 const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
 }, { threshold: 0.12 });
 document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
 
@@ -533,55 +538,11 @@ function toast(msg, isErr=false){
   setTimeout(() => t.classList.remove('show'), 3500);
 }
 
-/* =============== BOOKING FORM =============== */
-const bookingForm = document.getElementById('bookingForm');
-const bookingSuccess = document.getElementById('bookingSuccess');
-bookingForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(bookingForm));
-  if (!data.name || !data.phone || !data.service || !data.date || !data.time) {
-    toast('Please fill in all required fields.', true); return;
-  }
-  // Save locally (no backend in single-file version)
-  const bookings = JSON.parse(localStorage.getItem('lumevia_bookings') || '[]');
-  bookings.push({ ...data, id: Date.now(), status: 'pending', created_at: new Date().toISOString() });
-  localStorage.setItem('lumevia_bookings', JSON.stringify(bookings));
-
-  // WhatsApp quick-send link (optional: opens WA with pre-filled message)
-  const waMsg = `New Appointment Request%0A%0AName: ${encodeURIComponent(data.name)}%0APhone: ${encodeURIComponent(data.phone)}%0AService: ${encodeURIComponent(data.service)}%0ADate: ${data.date} ${data.time}%0ANotes: ${encodeURIComponent(data.notes||'-')}`;
-  // Uncomment next line if you want the form to auto-open WhatsApp:
-  // window.open(`https://wa.me/923045992981?text=${waMsg}`, '_blank');
-
-  bookingForm.reset();
-  bookingForm.classList.add('hidden');
-  bookingSuccess.classList.remove('hidden');
-  toast('Appointment request received!');
-});
-document.getElementById('bookAnother').addEventListener('click', () => {
-  bookingSuccess.classList.add('hidden');
-  bookingForm.classList.remove('hidden');
-});
-
-/* =============== CONTACT FORM =============== */
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(e.target));
-  if (!data.name || !data.message) { toast('Please enter your name and message.', true); return; }
-  const msgs = JSON.parse(localStorage.getItem('lumevia_contacts') || '[]');
-  msgs.push({ ...data, id: Date.now(), created_at: new Date().toISOString() });
-  localStorage.setItem('lumevia_contacts', JSON.stringify(msgs));
-  e.target.reset();
-  toast("Message sent! We'll get back to you soon.");
-});
-
 /* =============== INIT =============== */
 document.getElementById('year').textContent = new Date().getFullYear();
-// set min date to today
-const dateInput = document.querySelector('input[name="date"]');
-if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
-populateServiceSelect();
 renderTabs();
 renderDisplay();
+renderPrices();
 onScroll();
 </script>
 </body>
